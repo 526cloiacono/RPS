@@ -6,8 +6,8 @@ let greeting = document.getElementById('greeting');
 
 // display for greeting
 userName 
-  ? greeting.innerText = `Hello, ${userName}!` 
-  : greeting.innerText = 'Hello stranger!';
+userName ? document.getElementById('greeting').innerText=`Hello, ${userName}!` 
+: document.getElementById('greeting').innerText='Hello stranger!'
 
 
 
@@ -79,5 +79,9 @@ const getUserChoice = (userInput) => {
       <p>${determineWinner(validUserChoice, computerChoice)}</p>
     `;
   };
-  
+
+  // Event listeners for button clicks
+  document.getElementById('rockBtn').addEventListener('click', () => playGame('rock'));
+  document.getElementById('paperBtn').addEventListener('click', () => playGame('paper'));
+  document.getElementById('scissorsBtn').addEventListener('click', () => playGame('scissors'));
   
