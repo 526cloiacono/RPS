@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    margin-top: 30px;
+  font-size: 100px;
+  color: white;
+  text-shadow: 3px 3px black;
+  font-family: "tt-nooks", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+    background-color: darkgray;
+}
+p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#greeting {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    text-shadow: 1px 1px black;
+}
