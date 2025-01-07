@@ -1,20 +1,20 @@
-
-// start of greeting
+//greeting
 let userName = prompt("Hello, What is your name?");
 
 if (userName) {
-    document.getElementById('greeting').innerText = `Hello, ${userName}!`;
+  document.getElementById('greeting').innerText = `Hello, ${userName}!`;
 } else {
-    document.getElementById('greeting').innerText = 'Hello stranger!';
+  document.getElementById('greeting').innerText = 'Hello stranger!';
 }
 
-// start of rps
+// Strt of Rps
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
     if (
       userInput === "rock" ||
       userInput === "scissors" ||
-      userInput === "paper" ||'bomb'
+      userInput === "paper" ||
+      userInput === "bomb"
     ) {
       return userInput;
     } else {
@@ -27,13 +27,10 @@ const getUserChoice = (userInput) => {
     switch (randomNumber) {
       case 0:
         return "rock";
-        break;
       case 1:
         return "paper";
-        break;
       case 2:
         return "scissors";
-        break;
     }
   };
   
@@ -62,28 +59,23 @@ const getUserChoice = (userInput) => {
         return "You won";
       }
     }
-  
     if(userChoice === 'bomb'){
-      return 'congrats You win'
+      return 'Congrats, You win!';
     }
   };
   
-  const playGame = () => {
-    const userChoice = getUserChoice('bomb')
+  const playGame = (userChoice) => {
+// get user choice
+    const validUserChoice = getUserChoice(userChoice);
   
-    const computerChoice = getComputerChoice ()
-  
-    console.log('you threw' + userChoice)
-    console.log( ' the computer threw' + computerChoice)
-  
-  
-    console.log(determineWinner(userChoice, computerChoice))
-  }
-  
-  
-  playGame()
-  
-  
-  
-  
+    //get choice from comp
+    const computerChoice = getComputerChoice();
+//display choice
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `
+      <p>You chose: ${validUserChoice}</p>
+      <p>The computer chose: ${computerChoice}</p>
+      <p>${determineWinner(validUserChoice, computerChoice)}</p>
+    `;
+  };
   
