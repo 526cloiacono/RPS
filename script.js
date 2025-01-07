@@ -1,13 +1,16 @@
-//greeting
+// Ask for the user's name
 let userName = prompt("Hello, What is your name?");
 
-if (userName) {
-  document.getElementById('greeting').innerText = `Hello, ${userName}!`;
-} else {
-  document.getElementById('greeting').innerText = 'Hello stranger!';
-}
+// Get the greeting element
+let greeting = document.getElementById('greeting');
 
-// Strt of Rps
+// display for greeting
+userName 
+  ? greeting.innerText = `Hello, ${userName}!` 
+  : greeting.innerText = 'Hello stranger!';
+
+
+
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
     if (
@@ -59,18 +62,16 @@ const getUserChoice = (userInput) => {
         return "You won";
       }
     }
-    if(userChoice === 'bomb'){
-      return 'Congrats, You win!';
-    }
   };
   
   const playGame = (userChoice) => {
-// get user choice
+    // Validate the user choice
     const validUserChoice = getUserChoice(userChoice);
   
-    //get choice from comp
+    // Get computer choice
     const computerChoice = getComputerChoice();
-//display choice
+  
+    // Display user and computer choices
     const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = `
       <p>You chose: ${validUserChoice}</p>
@@ -78,4 +79,5 @@ const getUserChoice = (userInput) => {
       <p>${determineWinner(validUserChoice, computerChoice)}</p>
     `;
   };
+  
   
