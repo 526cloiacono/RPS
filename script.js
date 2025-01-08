@@ -10,7 +10,7 @@ userName ? document.getElementById('greeting').innerText=`Hello, ${userName}!`
 : document.getElementById('greeting').innerText='Hello stranger!'
 
 
-
+// start of rpscode
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
     if (
@@ -84,4 +84,8 @@ const getUserChoice = (userInput) => {
   document.getElementById('rockBtn').addEventListener('click', () => playGame('rock'));
   document.getElementById('paperBtn').addEventListener('click', () => playGame('paper'));
   document.getElementById('scissorsBtn').addEventListener('click', () => playGame('scissors'));
+
+
+
+  
   

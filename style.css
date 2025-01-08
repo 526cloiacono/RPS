@@ -25,3 +25,11 @@ p{
     text-shadow: 1px 1px black;
 }
 
+#result{
+    background-color: rgb(121, 118, 118);
+    margin-left: 490px;
+    margin-right: 490px; 
+    border-radius: 25px 25px;
+    padding: 10px;
+    box-shadow: 3px 3px white;
+}
