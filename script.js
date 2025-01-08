@@ -59,14 +59,13 @@ const getUserChoice = (userInput) => {
       if (computerChoice === 'rock') {
         return "You Lose";
       } else {
+    
         return "You won";
       }
     }
   };
   
   const playGame = (userChoice) => {
-    // Validate the user choice
-    const validUserChoice = getUserChoice(userChoice);
   
     // Get computer choice
     const computerChoice = getComputerChoice();
@@ -74,9 +73,9 @@ const getUserChoice = (userInput) => {
     // Display user and computer choices
     const resultDiv = document.getElementById("result");
     resultDiv.innerHTML = `
-      <p>You chose: ${validUserChoice}</p>
+      <p>You chose: ${userChoice}</p>
       <p>The computer chose: ${computerChoice}</p>
-      <p>${determineWinner(validUserChoice, computerChoice)}</p>
+      <p>${determineWinner(userChoice, computerChoice)}</p>
     `;
   };
 
@@ -85,7 +84,4 @@ const getUserChoice = (userInput) => {
   document.getElementById('paperBtn').addEventListener('click', () => playGame('paper'));
   document.getElementById('scissorsBtn').addEventListener('click', () => playGame('scissors'));
 
-
-
-  
   
