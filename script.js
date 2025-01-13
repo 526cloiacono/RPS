@@ -11,23 +11,6 @@ userName
 // starts socre at 0
 let userScore = 0, computerScore = 0;
 
-
-
-// start of rpscode
-const getUserChoice = (userInput) => {
-    userInput = userInput.toLowerCase();
-    if (
-      userInput === "rock" ||
-      userInput === "scissors" ||
-      userInput === "paper" ||
-      userInput === "bomb"
-    ) {
-      return userInput;
-    } else {
-      console.log("Error, Please Try Again!");
-    }
-};
-
 const getComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
