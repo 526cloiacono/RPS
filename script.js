@@ -26,6 +26,7 @@ const determineWinner = (userChoice, computerChoice) => {
     }
     if (userChoice === 'rock') {
         if (computerChoice === 'paper') {
+            computerScore++
             return "Sorry, computer won!"
         } else {
             return "Congrats you won"
@@ -33,6 +34,7 @@ const determineWinner = (userChoice, computerChoice) => {
     }
     if (userChoice === 'paper') {
         if (computerChoice === 'scissors') {
+            computerScore++
             return "You Lose"
         } else {
             return "You won"
@@ -40,6 +42,7 @@ const determineWinner = (userChoice, computerChoice) => {
     }
     if (userChoice === 'scissors') {
         if (computerChoice === 'rock') {
+            computerScore++
             return "You Lose"
         } else {
             return "You won"
@@ -54,7 +57,7 @@ const playGame = (userChoice) => {
     // Determine winner
     const result = determineWinner(userChoice, computerChoice);
 
-    // Update score based on result
+    // Update score 
     if (result.includes('won')) {
         userScore++;
     } else if (result.includes('computer won')) {
@@ -67,7 +70,7 @@ const playGame = (userChoice) => {
       <p>You chose: ${userChoice}</p>
       <p>The computer chose: ${computerChoice}</p>
       <p>${result}</p>
-      <p>Score: ${userName || 'Player'} - ${userScore}, Computer - ${computerScore}</p>
+      <p>Score: ${userName || 'Player'}: ${userScore}, Computer: ${computerScore}</p>
     `
 
     // Check if there is a winner
@@ -87,7 +90,7 @@ const checkWinner = () => {
   }
 }
 
-// Event listeners for button clicks
+// Event listeners 
 document.getElementById('rockBtn').addEventListener('click', () => playGame('rock'));
 document.getElementById('paperBtn').addEventListener('click', () => playGame('paper'));
 document.getElementById('scissorsBtn').addEventListener('click', () => playGame('scissors'));
