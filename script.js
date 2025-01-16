@@ -72,7 +72,6 @@ const playGame = (userChoice) => {
       <p>${result}</p>
       <p>Score: ${userName || 'Player'}: ${userScore}, Computer: ${computerScore}</p>
     `
-
     // Check if there is a winner
     checkWinner();
 }

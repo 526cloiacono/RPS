@@ -27,15 +27,15 @@ p{
 
 #result{
     background-color: rgb(121, 118, 118);
-    margin-left: 490px;
-    margin-right: 490px; 
     border-radius: 25px 25px;
     padding: 10px;
     box-shadow: 3px 3px white;
-    margin-top: 50px;
+    margin-top: 30px;
+    text-align: center
 }
 
 
 .container {
   text-align: center;
   }
+
