@@ -40,8 +40,9 @@ p{
   }
 
   .reset{
-    width: 100 px;
-    margin-top: 45px;
+    width: 60 px;
+    margin-top: 25px;
+    margin-bottom: 15px;
     font-size: 50px;
   }
 
