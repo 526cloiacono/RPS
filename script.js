@@ -90,13 +90,13 @@ const checkWinner = () => {
 }
 
 // start of reset button
-const resetGame = () =>{
-    userScore = 0
-    computerScore = 0
-    document.getElementById('result').innerHtml = ''
-    resultDiv()
-    checkWinner()
-}
+const resetGame = () => {
+    userScore = 0;
+    computerScore = 0;
+    document.getElementById('result').innerHTML = ''; 
+    checkWinner(); 
+};
+
 // Event listeners 
 document.getElementById('rockBtn').addEventListener('click', () => playGame('rock'));
 document.getElementById('paperBtn').addEventListener('click', () => playGame('paper'));
